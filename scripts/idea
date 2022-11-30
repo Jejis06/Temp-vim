@@ -1,0 +1,11 @@
+#!/bin/bash
+
+FILE=idea-$(date +"%y%m%d%H%M%S")
+
+vim $FILE 
+if [ -e $FILE ]; then
+	cat $FILE | xclip -selection clipboard
+	rm $FILE 
+fi
+
+
